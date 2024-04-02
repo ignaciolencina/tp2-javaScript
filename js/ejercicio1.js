@@ -8,11 +8,13 @@ edad = Number(edad);
 if (isNaN(edad)) {
   alert("No es un número");
 } else {
-  if (edad <= 0) {
-    alert("No es un número válido");
-  } else if (edad >= 18) {
-    alert("Tiene edad sufiente para conducir");
+  if (edad >= 0 && edad < 100) {
+    if (edad >= 18) {
+      alert("Tiene edad sufiente para conducir");
+    } else {
+      alert("Usted es menor de edad, no puede conducir");
+    }
   } else {
-    alert("Usted es menor de edad, no puede conducir");
+    alert("No es un número válido");
   }
 }
